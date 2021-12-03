@@ -1,8 +1,5 @@
 # Multiple Disease Predictor
 
-Website Link - https://personalprojectsanjay.herokuapp.com/
-
-
 - [Diabetes Dataset](https://www.kaggle.com/uciml/pima-indians-diabetes-database)
 - [Breast Cancer Dataset](https://www.kaggle.com/uciml/breast-cancer-wisconsin-data)
 - [Heart Disease Dataset](https://www.kaggle.com/ronitf/heart-disease-uci)
