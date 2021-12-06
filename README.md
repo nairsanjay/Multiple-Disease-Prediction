@@ -5,3 +5,4 @@
 - [Heart Disease Dataset](https://www.kaggle.com/ronitf/heart-disease-uci)
 - [Kidney Disease Dataset](https://www.kaggle.com/mansoordaku/ckdisease)
 - [Liver Disease Dataset](https://www.kaggle.com/uciml/indian-liver-patient-records)
+- [Pneumonia Disease Dataset](https://www.kaggle.com/paultimothymooney/chest-xray-pneumonia)
