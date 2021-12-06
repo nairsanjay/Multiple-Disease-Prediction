@@ -1,6 +1,9 @@
 from flask import Flask, render_template, request, flash, redirect
 import pickle
 import numpy as np
+from PIL import Image
+from tensorflow.keras.models import load_model
+
 
 app = Flask(__name__)
 
@@ -65,12 +68,11 @@ def pneumoniapredictPage():
     if request.method == 'POST':
         try:
             if 'image' in request.files:
-                img = np.asarray(Image.open(request.files['image']).convert('L').resize((36, 36))).reshape(
-                    (1, 36, 36, 1)) / 255.0
-                pred2 = np.argmax(load_model("models/pneumonia.h5").predict(img)[0])
+                pred2 = np.argmax(load_model("models/pneumonia.h5").predict(
+                    np.asarray(Image.open(request.files['image']).convert('L').resize((36, 36))).reshape(
+                        (1, 36, 36, 1)) / 255.0)[0])
         except:
-            message = "Please upload an Image"
-            return render_template('pneumonia.html', message = message)
+            return render_template('pneumonia.html', message="Upload Image!")
     return render_template('predict.html', pred = pred2)
 
 
