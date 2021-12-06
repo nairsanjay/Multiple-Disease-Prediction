@@ -2,4 +2,4 @@ flask
 sklearn
 numpy
 gunicorn
-tensorflow
+tensorflow-cpu 
