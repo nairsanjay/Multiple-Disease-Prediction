@@ -65,11 +65,13 @@ def pneumoniapredictPage():
     if request.method == 'POST':
         try:
             if 'image' in request.files:
-                pred = np.argmax(load_model("models/pneumonia.h5").predict(
+                model = load_model("models/pneumonia.h5")
+                pred = np.argmax(model.predict(
                     np.asarray(Image.open(request.files['image']).convert('L').resize((36, 36))).reshape(
                         (1, 36, 36, 1)) / 255.0)[0])
         except:
-            return render_template('pneumonia.html', message="No image found!")
+            message = "Please upload an Image"
+            return render_template('pneumonia.html', message = message)
     return render_template('pneumonia_predict.html', pred = pred)
 
 
