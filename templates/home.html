@@ -1,0 +1,31 @@
+{% extends 'main.html' %}
+{% block content %}
+{% if message %}
+        <div class="alert alert-danger">{{ message }}</div>
+    {% endif %}
+<div class="container">
+        <h1>Multiple Disease Predictor</h1>
+        <h2>A machine learning and web development project by Group 24</h2>
+
+        <h5>Click on the respective links to start predicting!</h5>
+          <centre>
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item active">
+                <a class="nav-link" href="{{ url_for('diabetesPage') }}">Diabetes Prediction</a>
+              </li>
+              <li class="nav-item active">
+                <a class="nav-link" href="{{ url_for('cancerPage') }}">Breast Cancer Prediction</a>
+              </li>
+              <li class="nav-item active">
+                 <a class="nav-link" href="{{ url_for('heartPage') }}">Heart Disease Prediction</a>
+              </li>
+              <li class="nav-item active">
+                 <a class="nav-link" href="{{ url_for('kidneyPage') }}">Kidney Disease Prediction</a>
+               </li>
+               <li class="nav-item active">
+                 <a class="nav-link" href="{{ url_for('liverPage') }}">Liver Disease Prediction</a>
+               </li>
+            </ul>
+         </centre>
+</div>
+{% endblock %}
