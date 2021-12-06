@@ -25,7 +25,7 @@
         <center><h1>Pneumonia Predictor</h1></center>
         <div class="card card-body">
             <center><h3>Upload the Image!</h3></center>
-            <form class="form-horizontal" action="{{ url_for('pneumoniapredictPage') }}" method="POST" enctype="multipart/form-data">
+            <form class="form-horizontal" action="{{ url_for('predictPage') }}" method="POST" enctype="multipart/form-data">
                 <center>
                 <input onchange="readURL(this);" type="file" name="image" placeholder="Upload!">
                 <br>
