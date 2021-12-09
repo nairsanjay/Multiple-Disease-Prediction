@@ -1,6 +1,7 @@
 # Multiple Disease Predictor
+## Group 24
 
-Deployed at - https://multiple-disease-pred.herokuapp.com/pneumonia
+Deployed at - https://multiple-disease-pred.herokuapp.com
 
 - [Diabetes Dataset](https://www.kaggle.com/uciml/pima-indians-diabetes-database)
 - [Pneumonia Dataset](https://www.kaggle.com/paultimothymooney/chest-xray-pneumonia)
